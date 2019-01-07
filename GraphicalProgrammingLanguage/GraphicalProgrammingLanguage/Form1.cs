@@ -16,5 +16,19 @@ namespace GraphicalProgrammingLanguage
         {
             InitializeComponent();
         }
+
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fdlg = new OpenFileDialog();
+            fdlg.Title = "C# Corner Open File Dialog";
+            fdlg.InitialDirectory = @"c:\";
+            fdlg.Filter = "All files (*.*)|*.*|All files (*.*)|*.*";
+            fdlg.FilterIndex = 2;
+            fdlg.RestoreDirectory = true;
+            if (fdlg.ShowDialog() == DialogResult.OK)
+            {
+                txtInput.Text = fdlg.FileName;
+            }
+        }
     }
 }
