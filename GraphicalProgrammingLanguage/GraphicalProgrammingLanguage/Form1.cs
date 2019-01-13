@@ -40,12 +40,20 @@ namespace GraphicalProgrammingLanguage
         Creator factory = new FactoryClass();
         Pen myPen = new Pen(Color.Red);
         int x = 0, y = 0, width, height, radius, point, repeatval, counter;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Form1_Load(object sender, EventArgs e)
         {
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void label2_Click(object sender, EventArgs e)
         {
 

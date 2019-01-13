@@ -12,7 +12,13 @@ namespace GraphicalProgrammingLanguage
     /// </summary>
     public class Circle : IShape
     {
-        int x, y, radius;
+        /// <summary>
+        /// this methods calls the integer values of x , y and radius.
+        /// </summary>
+        public int x, y, radius;
+        /// <summary>
+        /// 
+        /// </summary>
         public Circle() : base()
         {
 

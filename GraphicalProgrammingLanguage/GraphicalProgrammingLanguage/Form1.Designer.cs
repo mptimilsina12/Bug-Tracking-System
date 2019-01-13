@@ -1,5 +1,8 @@
 ﻿namespace GraphicalProgrammingLanguage
 {
+    /// <summary>
+    /// this is the main form of Graphical Programming Language
+    /// </summary>
     partial class Form1
     {
         /// <summary>
