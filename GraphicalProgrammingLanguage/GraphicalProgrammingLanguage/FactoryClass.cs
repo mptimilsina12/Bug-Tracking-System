@@ -33,6 +33,11 @@ namespace GraphicalProgrammingLanguage
                 return new Rectangle();
 
             }
+            else if (shapeType.Equals("3drectangle"))
+            {
+                return new _3DRectangle();
+
+            }
             else if (shapeType.Equals("triangle"))
             {
                 return new Triangle();

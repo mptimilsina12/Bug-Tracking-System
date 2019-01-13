@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="3DRectangle.cs" />
     <Compile Include="Circle.cs" />
     <Compile Include="Creator.cs" />
     <Compile Include="FactoryClass.cs" />
