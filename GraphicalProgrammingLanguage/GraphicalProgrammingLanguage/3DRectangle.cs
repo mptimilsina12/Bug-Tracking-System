@@ -46,15 +46,24 @@ namespace GraphicalProgrammingLanguage
         /// <param name="g">Graphics</param>
         public void draw(Graphics g)
         {
-            Pen p = new Pen(Color.Red);
-            g.DrawRectangle(p, x - width, y - height, width * 2, height * 2);
-            Brush bgBrush = new SolidBrush(Color.Blue);
-            g.SmoothingMode = SmoothingMode.AntiAlias;
-            //Fill the background using Solid brush and then apply a white wash 
-            RectangleF rec = new RectangleF(x - width, y - height, width * 2, height * 2);
-            g.FillRectangle(bgBrush, x - width, y - height, width * 2, height * 2);
-            g.FillRectangle(new SolidBrush(Color.FromArgb(180, Color.White)), x - width, y - height, width * 2, height * 2);
-            ControlPaint.DrawBorder3D(g, x - width, y - height, width * 2, height * 2, Border3DStyle.Raised);
+            try
+            {
+                Pen p = new Pen(Color.Red);
+                g.DrawRectangle(p, x - width, y - height, width * 2, height * 2);
+                Brush bgBrush = new SolidBrush(Color.Blue);
+                g.SmoothingMode = SmoothingMode.AntiAlias;
+                //Fill the background using Solid brush and then apply a white wash 
+                RectangleF rec = new RectangleF(x - width, y - height, width * 2, height * 2);
+                g.FillRectangle(bgBrush, x - width, y - height, width * 2, height * 2);
+                g.FillRectangle(new SolidBrush(Color.FromArgb(180, Color.White)), x - width, y - height, width * 2, height * 2);
+                ControlPaint.DrawBorder3D(g, x - width, y - height, width * 2, height * 2, Border3DStyle.Raised);
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            
 
         }
         /// <summary>
@@ -63,10 +72,18 @@ namespace GraphicalProgrammingLanguage
         /// <param name="list">Set Parameter</param>
         public void set(params int[] list)
         {
-            this.x = list[0];
-            this.y = list[1];
-            this.width = list[2];
-            this.height = list[3];
+            try
+            {
+                this.x = list[0];
+                this.y = list[1];
+                this.width = list[2];
+                this.height = list[3];
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
     }
 }

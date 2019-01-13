@@ -42,8 +42,18 @@ namespace GraphicalProgrammingLanguage
         /// <param name="g"> Graphics parameter</param>
         public void draw(Graphics g)
         {
-            Pen p = new Pen(Color.Black, 2);
-            g.DrawLine(p, x, y, toX, toY);
+            try
+            {
+
+                Pen p = new Pen(Color.Black, 2);
+                g.DrawLine(p, x, y, toX, toY);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
         /// <summary>
         /// this methods sets the values oc x and y of line to x-axis and y-axis
