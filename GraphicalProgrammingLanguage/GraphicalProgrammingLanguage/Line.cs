@@ -19,6 +19,11 @@ namespace GraphicalProgrammingLanguage
 
 
         }
+
+        /// <summary>
+        /// this method Drwa the circle
+        /// </summary>
+        /// <param name="g"> Graphics parameter</param>
         public void draw(Graphics g)
         {
             Pen p = new Pen(Color.Black, 2);
