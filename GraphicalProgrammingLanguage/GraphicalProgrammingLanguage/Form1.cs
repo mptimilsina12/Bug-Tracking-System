@@ -46,7 +46,11 @@ namespace GraphicalProgrammingLanguage
             x = toX;
             y = toY;
         }
-
+        /// <summary>
+        /// this browse the txt file  from the selected path and insert the values on txtinput text box.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBrowse_Click(object sender, EventArgs e)
         {
             Stream myStream = null;
