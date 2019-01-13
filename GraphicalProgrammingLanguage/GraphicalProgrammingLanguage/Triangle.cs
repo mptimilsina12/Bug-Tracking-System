@@ -7,24 +7,36 @@ using System.Drawing;
 
 namespace GraphicalProgrammingLanguage
 {
-    public class Rectangle: IShape
+    public class Triangle : IShape
     {
         int x, y, width, height;
-        public Rectangle() : base()
+
+        public Triangle() : base()
         {
             width = 0;
             height = 0;
         }
-        public Rectangle(int x, int y, int width, int height)
-        {
 
-            this.width = width; //the only thingthat is different from shape
+        public Triangle(int x, int y, int width, int height)
+        {
+            this.width = width;
             this.height = height;
         }
+
         public void draw(Graphics g)
         {
-            Pen p = new Pen(Color.Black, 2);
-            g.DrawRectangle(p, x - (width / 2), y - (height / 2), width * 2, height * 2);
+
+            Point[] p = new Point[3];
+            p[0].X = x;
+            p[0].Y = y - (height / 2);
+
+            p[1].X = x - (width / 2);
+            p[1].Y = y + (height / 2);
+
+            p[2].X = x + (width / 2);
+            p[2].Y = y + (height / 2);
+            Pen po = new Pen(Color.Black, 2);
+            g.DrawPolygon(po, p);
         }
 
         public void set(params int[] list)

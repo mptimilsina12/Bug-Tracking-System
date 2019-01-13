@@ -3,35 +3,54 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace GraphicalProgrammingLanguage
 {
+    /// <summary>
+    /// this holds the commands/code of circle class
+    /// </summary>
     public class Circle : IShape
     {
-            int x, y, radius;
-            public Circle() : base()
-            {
+        int x, y, radius;
+        public Circle() : base()
+        {
 
-            }
-            public Circle(int x, int y, int radius)
-            {
+        }
+        /// <summary>
+        /// this method passes the value of circle
+        /// </summary>
+        /// <param name="x">x-axis</param>
+        /// <param name="y">Y-axis</param>
+        /// <param name="radius">Radius of circle</param>
+        public Circle(int x, int y, int radius)
+        {
 
-                this.radius = radius; //the only thingthat is different from shape
-            }
-            public void draw(Graphics g)
-            {
-                Pen p = new Pen(Color.Black, 2);
-                g.DrawEllipse(p, x - radius, y - radius, radius * 2, radius * 2);
-            }
+            this.radius = radius; //the only thingthat is different from shape
+        }
 
-            public void set(params int[] list)
-            {
-                this.x = list[0];
-                this.y = list[1];
-                this.radius = list[2];
-            }
+        /// <summary>
+        /// This is draw method. It draw the circle on the panel
+        /// </summary>
+        /// <param name="g"></param>
+        public void draw(Graphics g)
+        {
+            Pen p = new Pen(Color.Black, 2);
+            g.DrawEllipse(p, x - radius, y - radius, radius * 2, radius * 2);
+        }
+
+        /// <summary>
+        /// It sets the value of x, y and radius.
+        /// </summary>
+        /// <param name="list"></param>
+        public void set(params int[] list)
+        {
+            this.x = list[0];
+            this.y = list[1];
+            this.radius = list[2];
+        }
 
 
-        
+
     }
 }
