@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using WinFormsSyntaxHighlighter;
 
 namespace GraphicalProgrammingLanguage
 {
@@ -19,10 +20,37 @@ namespace GraphicalProgrammingLanguage
         public Form1()
         {
             InitializeComponent();
+            //its for current date
+            lblTime.Text = DateTime.Now.ToLongTimeString();
+            var syntaxHighlighter = new SyntaxHighlighter(txtInput);
+            // multi-line comments
+           
+            syntaxHighlighter.AddPattern(new PatternDefinition("circle", "rectangle", "int", "var"), new SyntaxStyle(Color.Blue));
+            // keywords2
+            syntaxHighlighter.AddPattern(new PatternDefinition("triangle", "3drectangle", "int", "var"), new SyntaxStyle(Color.Red));
+            // keywords2
+            syntaxHighlighter.AddPattern(new PatternDefinition("loop", "endloop", "int", "var"), new SyntaxStyle(Color.Purple));
+            // keywords2
+            syntaxHighlighter.AddPattern(new PatternDefinition("counter", "int", "var"), new SyntaxStyle(Color.Green));
+            // keywords2
+            syntaxHighlighter.AddPattern(new PatternDefinition("moveto", "radius", "int", "var"), new SyntaxStyle(Color.Pink));
+            // keywords2
+
         }
         Creator factory = new FactoryClass();
         Pen myPen = new Pen(Color.Red);
         int x = 0, y = 0, width, height, radius, point, repeatval, counter;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
         int loop = 0, kStart = 0, ifcounter = 0;
         private bool loopcheck;
 
@@ -115,7 +143,7 @@ namespace GraphicalProgrammingLanguage
 
 
             string command = txtInput.Text.ToLower();
-            string[] commandline = command.Split(new String[] { "\r\n" }, StringSplitOptions.RemoveEmptyEntries);
+            string[] commandline = command.Split(new String[] { "\n" }, StringSplitOptions.RemoveEmptyEntries);
 
             for (int k = 0; k < commandline.Length; k++)
             {

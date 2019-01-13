@@ -25,7 +25,7 @@ namespace GraphicalProgrammingLanguage
             height = 0;
         }
         /// <summary>
-        /// 
+        /// this methods passes the integer values of  x-axis, y-axis, width and height
         /// </summary>
         /// <param name="x">X-Axis</param>
         /// <param name="y">Y-Axis</param>
