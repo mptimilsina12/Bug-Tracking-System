@@ -8,8 +8,16 @@ using System.IO;
 
 namespace GraphicalProgrammingLanguage
 {
+    /// <summary>
+    /// Factory class is decleared.
+    /// </summary>
     class FactoryClass : Creator
     {
+        /// <summary>
+        /// this methods calls the shapes of provided objects 
+        /// </summary>
+        /// <param name="shapeType">Shape Parameter</param>
+        /// <returns></returns>
         public override IShape getShape(string shapeType)
         {
             shapeType = shapeType.ToLower().Trim(); //yoi could argue that you want a specific word string to create an object but I'm allowing any case combination
